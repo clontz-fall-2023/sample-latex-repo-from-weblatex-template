@@ -4,26 +4,78 @@
 
 \usepackage{amsmath} % \usepackage is a command that allows you to add functionality to your LaTeX code
 
-\title{Simple Sample} % Sets article title
-\author{My Name} % Sets authors name
+\usepackage{hyperref}
+
+\title{Homework Set MA 237} % Sets article title
+\author{Steven Clontz} % Sets authors name
 \date{\today} % Sets date for date compiled
 
 % The preamble ends with the command \begin{document}
 \begin{document} % All begin commands must be paired with an end command somewhere
 \maketitle % creates title using information in preamble (title, author, date)
 
-\section{Hello World!} % creates a section
+\section{LE2 v1} % creates a section
 
-\textbf{Hello World!} Today I am learning \LaTeX. %notice how the command will end at the first non-alphabet charecter such as the . after \LaTeX
-\LaTeX{} is a great program for writing math. I can write in line math such as $a^2+b^2=c^2$ %$ tells LaTexX to compile as math
-. I can also give equations their own space:
-\begin{equation} % Creates an equation environment and is compiled as math
-  \gamma^2+\theta^2=\omega^2
-\end{equation}
-If I do not leave any blank lines \LaTeX{} will continue  this text without making it into a new paragraph.  Notice how there was no indentation in the text after equation (1).
-Also notice how even though I hit enter after that sentence and here $\downarrow$
-\LaTeX{} formats the sentence without any break.  Also   look  how      it   doesn't     matter          how    many  spaces     I put     between       my    words.
+\href{https://teambasedinquirylearning.github.io/linear-algebra/2023/exercises/#/bank/LE2/1/}{LE2/1}
 
-For a new essay I can leave a blank space in my code.
+%%%%% SpaTeXt Commands %%%%%
+\providecommand{\stxKnowl}{}\renewcommand{\stxKnowl}[1]{#1}
+\providecommand{\stxOuttro}{}\renewcommand{\stxOuttro}[1]{#1}
+\providecommand{\stxTitle}{}\renewcommand{\stxTitle}[1]{#1}
+% Comment next line to show outtros
+\renewcommand{\stxOuttro}[1]{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\stxKnowl{
+  \begin{enumerate}
+    \item
+          \stxKnowl{
+            For each of the following matrices, explain why it is not in reduced row echelon form.
+
+            \begin{enumerate}
+              \item
+                    \stxKnowl{
+                      \[A = \left[\begin{array}{ccccc} 0 & 0 & 1 & 0 & -2 \\ 1 & 5 & 0 & -2 & 1 \\ 0 & 0 & 0 & 0 & 0 \end{array}\right]\]
+
+                      \stxOuttro{
+                        \(A=\left[\begin{array}{ccccc} 0 & 0 & 1 & 0 & -2 \\ 1 & 5 & 0 & -2 & 1 \\ 0 & 0 & 0 & 0 & 0 \end{array}\right]\) is not in reduced row echelon form because   the pivots are not descending to the right.
+
+                      }
+                    }
+
+              \item
+                    \stxKnowl{
+                      \[B = \left[\begin{array}{ccccc} 1 & -6 & 3 & 0 & -1 \\ 0 & 0 & 0 & 7 & 14 \\ 0 & 0 & 0 & 0 & 0 \end{array}\right]\]
+
+                      \stxOuttro{
+                        \(B=\left[\begin{array}{ccccc} 1 & -6 & 3 & 0 & -1 \\ 0 & 0 & 0 & 7 & 14 \\ 0 & 0 & 0 & 0 & 0 \end{array}\right]\) is not in reduced row echelon form because    the pivots are not all \(1\).
+
+                      }
+                    }
+
+              \item
+                    \stxKnowl{
+                      \[C = \left[\begin{array}{ccccc} 1 & 7 & -4 & 1 & 12 \\ 0 & 1 & -1 & 0 & 2 \\ 0 & 0 & 0 & 0 & 0 \end{array}\right]\]
+
+                      \stxOuttro{
+                        \(C=\left[\begin{array}{ccccc} 1 & 7 & -4 & 1 & 12 \\ 0 & 1 & -1 & 0 & 2 \\ 0 & 0 & 0 & 0 & 0 \end{array}\right]\) is not in reduced row echelon form because  not every entry above and below each pivot is zero.
+
+                      }
+                    }
+
+            \end{enumerate}
+          }
+
+    \item
+          \stxKnowl{
+            Show step by step why \[\operatorname{RREF}\left[\begin{array}{ccccc} 4 & 4 & 3 & 18 & -11 \\ -3 & -3 & 1 & -7 & 5 \\ 3 & 3 & 3 & 15 & -9 \end{array}\right] = \left[\begin{array}{ccccc} 1 & 1 & 0 & 3 & -2 \\ 0 & 0 & 1 & 2 & -1 \\ 0 & 0 & 0 & 0 & 0 \end{array}\right]\]
+
+            \stxOuttro{
+              \[\left[\begin{array}{ccccc} 4 & 4 & 3 & 18 & -11 \\ -3 & -3 & 1 & -7 & 5 \\ 3 & 3 & 3 & 15 & -9 \end{array}\right] \sim \cdots \sim \left[\begin{array}{ccccc} 1 & 1 & 0 & 3 & -2 \\ 0 & 0 & 1 & 2 & -1 \\ 0 & 0 & 0 & 0 & 0 \end{array}\right]\]
+
+            }
+          }
+
+  \end{enumerate}
+}
 
 \end{document} % This is the end of the document
